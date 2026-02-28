@@ -1,4 +1,4 @@
-namespace: murali-ns
+namespace: ranjana-ns
 
 #configmap details
 configmap:
@@ -7,14 +7,14 @@ configmap:
     MONGO_INITDB_DATABASE: "vegetable_order_app"
 
 #deployment details
-replicas: 2
+replicas: 3
 deployment:
   name: vegetable-order-app-deployment
   labels:
     app: vegetable-order-app
   port:  3000
   image:
-    repository: vasist/vegetable-order-app
+    repository: ranjana10703/vegetable-order-app
     tag: v1.0.1
     env:
       name: MONGO_URI
